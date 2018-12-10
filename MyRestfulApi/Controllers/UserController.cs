@@ -20,14 +20,14 @@ namespace MyRestfulApi.Controllers
             _context = context;
         }
 
-        // GET: api/Users
+        // GET: api/User
         [HttpGet]
         public IEnumerable<User> GetUser()
         {
             return _context.User;
         }
 
-        // GET: api/Users/5
+        // GET: api/User/5
         [HttpGet("{id}")]
         public async Task<IActionResult> GetUser([FromRoute] int id)
         {
@@ -46,7 +46,7 @@ namespace MyRestfulApi.Controllers
             return Ok(user);
         }
 
-        // PUT: api/Users/5
+        // PUT: api/User/5
         [HttpPut("{id}")]
         public async Task<IActionResult> PutUser([FromRoute] int id, [FromBody] User user)
         {
@@ -81,7 +81,7 @@ namespace MyRestfulApi.Controllers
             return NoContent();
         }
 
-        // POST: api/Users
+        // POST: api/User
         [HttpPost]
         public async Task<IActionResult> PostUser([FromBody] User user)
         {
